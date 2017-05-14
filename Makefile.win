@@ -6,12 +6,12 @@ CC       = gcc.exe
 WINDRES  = windres.exe
 OBJ      = main.o
 LINKOBJ  = main.o
-LIBS     = -L"D:/rusk_rask/d/Dev-Cpp11/MinGW64/lib" -L"D:/rusk_rask/d/Dev-Cpp11/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -fno-elide-constructors
-INCS     = -I"D:/rusk_rask/d/Dev-Cpp11/MinGW64/include" -I"D:/rusk_rask/d/Dev-Cpp11/MinGW64/x86_64-w64-mingw32/include" -I"D:/rusk_rask/d/Dev-Cpp11/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
-CXXINCS  = -I"D:/rusk_rask/d/Dev-Cpp11/MinGW64/include" -I"D:/rusk_rask/d/Dev-Cpp11/MinGW64/x86_64-w64-mingw32/include" -I"D:/rusk_rask/d/Dev-Cpp11/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/rusk_rask/d/Dev-Cpp11/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+LIBS     = -L"C:/Users/Paul/Desktop/Dev-Cpp11/MinGW64/lib" -L"C:/Users/Paul/Desktop/Dev-Cpp11/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Users/Paul/Desktop/Dev-Cpp11/MinGW64/include" -I"C:/Users/Paul/Desktop/Dev-Cpp11/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/Paul/Desktop/Dev-Cpp11/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Users/Paul/Desktop/Dev-Cpp11/MinGW64/include" -I"C:/Users/Paul/Desktop/Dev-Cpp11/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/Paul/Desktop/Dev-Cpp11/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/Paul/Desktop/Dev-Cpp11/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = xox.exe
-CXXFLAGS = $(CXXINCS) -std=c++14 -pthread -fno-elide-constructors
-CFLAGS   = $(INCS) -std=c++14 -pthread -fno-elide-constructors
+CXXFLAGS = $(CXXINCS) -std=c++14 -pthread
+CFLAGS   = $(INCS) -std=c++14 -pthread
 RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom

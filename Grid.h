@@ -13,9 +13,9 @@ k.y = static_cast<int> (vec_indx / game_size);
 template<typename T>
 class Grid {
 	int size_hor, size_vert;
-	std::vector<T> vec{};
 	std::vector<Row*> row_vec{};
-
+protected:
+	std::vector<T> vec{};
 public:
 	Grid() :Grid(0) {};
 	Grid(int sz) :Grid(sz, sz) {}

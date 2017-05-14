@@ -4,11 +4,12 @@
 class Tboard: public Grid<Rute> {
 	
 	public:
-		Tboard(int sz) : Grid(sz) {}
+		Tboard(int sz) : Grid(sz) { fill();}
 		~Tboard() { //std::cout << "Tboard::~Tboard()\n"; 
 		}
 		Rute_verdi set_val(int x, int y, Rute_verdi rv);
 		Rute_verdi get_val(int x, int y);
+		bool isEmptyBoard();
 };
 
 Rute_verdi Tboard::set_val(int x, int y, Rute_verdi rv) {
@@ -25,5 +26,14 @@ Rute_verdi Tboard::set_val(int x, int y, Rute_verdi rv) {
 Rute_verdi Tboard::get_val(int x, int y) {
 	Rute ru = getElement(x, y);
 	return ru.int_val();
+	
+}
+
+bool Tboard::isEmptyBoard() {
+	
+	for(Rute& ru: vec) {
+		if(ru.int_val() != Rute_verdi::Blank) return false;
+	}
+	return true;
 	
 }
