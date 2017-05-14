@@ -10,15 +10,17 @@ class Tboard: public Grid<Rute> {
 		Rute_verdi set_val(int x, int y, Rute_verdi rv);
 		Rute_verdi get_val(int x, int y);
 		bool isEmptyBoard();
+		std::pair<int, int> singleBlank();
+		
 };
 
 Rute_verdi Tboard::set_val(int x, int y, Rute_verdi rv) {
 	Rute ru = getElement(x, y);
-	std::cout << "ru = " << ru << std::endl;
+	//std::cout << "ru = " << ru << std::endl;
 	Rute temp{ru};
 	ru.set_val(rv);
 	setElement(x, y, ru);
-	std::cout << "ru = " << ru << std::endl;
+	//std::cout << "ru = " << ru << std::endl;
 	return temp.int_val();
 	
 }
